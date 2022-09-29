@@ -33,16 +33,18 @@ az account set --subscription "d6b4bc51-75a6-4eb4-8cf2-4114beceec76"
 
 # Write-Host "Deploying resource group" -ForegroundColor Yellow
 
-$output = az group create `
---name 'rg_ramtin' `
---location 'westeurope
-Throw-WhenError -output $output
+# $output = az group create `
+# --name 'rg_rhishi' `
+# --location 'westeurope' `
+# Throw-WhenError -output $output
 
 # Note: use backticks ---> ` <---- to change line
 
 ## In your first az cli script, you need to create the following:
 # - Function App
+az functionapp create --name "" --resource-group "" --storage-account ""
 # - Storage Account
+az storage account create --name 'deleazdag1'  --resource-group 'rg_rhishi' 
 # - App Service Plan
 # Please note that the order matters as the commands are run sequentially...
 
